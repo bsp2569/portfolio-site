@@ -18,7 +18,7 @@ export const griditems = [
   },
   {
     id: 2,
-    title: "Available across time zones for seamless collaboration",
+    title: "Open to Relocation & Remote Opportunities",
     description: "",
     className: "lg:col-span-2 lg:col-start-0 md:col-span-3 md:row-span-2 lg:row-span-1 min-h-[20vh]",
     imgClassName: "",
