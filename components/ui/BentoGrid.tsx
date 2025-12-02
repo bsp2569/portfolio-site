@@ -11,10 +11,10 @@ import animationData from '@/data/confetti.json'
 import Lottie from "lottie-react";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
-import { PixelatedCanvas} from "./PixelatedCanvas.tsx";
+
 
 export const BentoGrid = ({
-  className,
+  className,  
   children,
 }: {
   className?: string;
