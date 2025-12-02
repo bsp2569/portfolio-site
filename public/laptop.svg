@@ -1,0 +1,216 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <g opacity="0.5">
+    <!-- Subtle grid -->
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M40 0H0V40" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+  </g>
+
+  <!-- Glows behind laptop -->
+  <circle cx="600" cy="380" r="240" fill="url(#halo)" filter="url(#blurStrong)" opacity="0.6"/>
+  <circle cx="780" cy="320" r="180" fill="url(#haloBlue)" filter="url(#blurSoft)" opacity="0.45"/>
+
+  <!-- Laptop shadow -->
+  <ellipse cx="600" cy="590" rx="360" ry="40" fill="url(#shadowGrad)" opacity="0.5" filter="url(#blurSoft)"/>
+
+  <!-- Laptop base -->
+  <g>
+    <!-- Deck -->
+    <path d="M320 520 L880 520 L940 560 L260 560 Z" fill="url(#deckGrad)"/>
+    <!-- Bevel line -->
+    <path d="M300 540 L900 540" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Keyboard (simple pattern) -->
+    <g opacity="0.3">
+      <defs>
+        <pattern id="keys" width="28" height="20" patternUnits="userSpaceOnUse">
+          <rect x="4" y="2" width="20" height="12" rx="2" fill="#2B2F52"/>
+        </pattern>
+      </defs>
+      <path d="M330 522 L870 522 L915 548 L285 548 Z" fill="url(#keys)"/>
+    </g>
+    <!-- Trackpad -->
+    <rect x="555" y="548" width="90" height="22" rx="4" fill="#2A2E4E" opacity="0.9"/>
+  </g>
+
+  <!-- Laptop screen frame -->
+  <g>
+    <path d="M350 180 L850 180 L900 440 L300 440 Z" fill="url(#frameGrad)"/>
+    <!-- Inner bezel -->
+    <path d="M370 200 L830 200 L870 430 L330 430 Z" fill="#0A0F2A"/>
+    <!-- Screen glow -->
+    <rect x="370" y="200" width="460" height="230" fill="url(#screenGlow)" filter="url(#blurSoft)"/>
+    <!-- Screen content container -->
+    <clipPath id="screenClip">
+      <path d="M370 200 L830 200 L870 430 L330 430 Z"/>
+    </clipPath>
+
+    <!-- Screen content: grid + neural web -->
+    <g clip-path="url(#screenClip)">
+      <!-- Subtle diagonal gradient -->
+      <rect x="370" y="200" width="520" height="300" fill="url(#screenDeep)"/>
+      <!-- Screen grid -->
+      <g opacity="0.25">
+        <g>
+          <!-- vertical -->
+          <g>
+            <path d="M390 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M430 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M470 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M510 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M550 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M590 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M630 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M670 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M710 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M750 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M790 200 V 440" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+          </g>
+          <!-- horizontal -->
+          <g>
+            <path d="M370 220 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 250 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 280 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 310 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 340 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 370 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 400 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M370 430 H 870" stroke="#5A6FFF" stroke-opacity="0.25" stroke-width="1"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Neural nodes inside screen -->
+      <g filter="url(#glow)">
+        <circle cx="520" cy="270" r="5" fill="#7AF5FF"/>
+        <circle cx="650" cy="310" r="5" fill="#7AF5FF"/>
+        <circle cx="580" cy="360" r="5" fill="#B18CFF"/>
+        <circle cx="730" cy="260" r="5" fill="#B18CFF"/>
+        <circle cx="460" cy="330" r="5" fill="#7AF5FF"/>
+        <path d="M520 270 L650 310 L580 360 L460 330 L520 270 M650 310 L730 260" stroke="url(#linkGrad)" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Elements OUTSIDE the laptop screen (floating holograms / nodes) -->
+  <g filter="url(#glow)">
+    <!-- Right hologram rings -->
+    <g transform="translate(930 300)">
+      <circle r="78" fill="none" stroke="url(#ringGrad)" stroke-width="2"/>
+      <circle r="54" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.8"/>
+      <circle r="32" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.6"/>
+      <circle r="4" fill="#7AF5FF"/>
+    </g>
+
+    <!-- Left neural cluster -->
+    <g transform="translate(230 290)">
+      <circle r="6" fill="#7AF5FF"/>
+      <circle cx="62" cy="22" r="5" fill="#B18CFF"/>
+      <circle cx="36" cy="64" r="4.5" fill="#7AF5FF"/>
+      <circle cx="-28" cy="46" r="5" fill="#B18CFF"/>
+      <path d="M0 0 L62 22 L36 64 L-28 46 Z" stroke="url(#linkGrad)" stroke-width="2"/>
+    </g>
+
+    <!-- Floating chart bars -->
+    <g transform="translate(980 470)">
+      <rect x="-40" y="-20" width="10" height="40" rx="2" fill="url(#barGrad)"/>
+      <rect x="-22" y="-30" width="10" height="60" rx="2" fill="url(#barGrad)"/>
+      <rect x="-4"  y="-12" width="10" height="24" rx="2" fill="url(#barGrad)"/>
+      <rect x="14"  y="-44" width="10" height="88" rx="2" fill="url(#barGrad)"/>
+    </g>
+  </g>
+
+  <!-- Small particles -->
+  <g opacity="0.5" filter="url(#blurTiny)">
+    <circle cx="1040" cy="220" r="2.2" fill="#7AF5FF"/>
+    <circle cx="170" cy="380" r="1.8" fill="#B18CFF"/>
+    <circle cx="1020" cy="520" r="1.8" fill="#7AF5FF"/>
+    <circle cx="300" cy="220" r="2.0" fill="#7AF5FF"/>
+    <circle cx="880" cy="160" r="2.4" fill="#B18CFF"/>
+  </g>
+
+  <!-- Defs -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#070B1F"/>
+      <stop offset="1" stop-color="#0E1433"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 380) rotate(90) scale(260)">
+      <stop stop-color="#6C8BFF"/>
+      <stop offset="1" stop-color="#11153A" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="haloBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(780 320) rotate(90) scale(200)">
+      <stop stop-color="#32D5FF"/>
+      <stop offset="1" stop-color="#11153A" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="shadowGrad" x1="240" y1="590" x2="960" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="deckGrad" x1="260" y1="560" x2="940" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#181C3A"/>
+      <stop offset="1" stop-color="#121735"/>
+    </linearGradient>
+
+    <linearGradient id="frameGrad" x1="300" y1="180" x2="900" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#272C53"/>
+      <stop offset="1" stop-color="#1B2147"/>
+    </linearGradient>
+
+    <linearGradient id="screenGlow" x1="370" y1="200" x2="830" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5D8CFF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#A77BFF" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="screenDeep" x1="370" y1="200" x2="890" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1436"/>
+      <stop offset="1" stop-color="#11183E"/>
+    </linearGradient>
+
+    <linearGradient id="ringGrad" x1="-80" y1="0" x2="80" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#32D5FF"/>
+      <stop offset="1" stop-color="#A77BFF"/>
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0" y1="-44" x2="0" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3CD3FF"/>
+      <stop offset="1" stop-color="#6F84FF"/>
+    </linearGradient>
+
+    <linearGradient id="linkGrad" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#32D5FF"/>
+      <stop offset="1" stop-color="#B18CFF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 20 -10" in="blur" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+
+    <filter id="blurSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+
+    <filter id="blurStrong" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+
+    <filter id="blurTiny" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+</svg>
